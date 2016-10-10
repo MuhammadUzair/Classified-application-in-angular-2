@@ -15,3 +15,12 @@ This application is developed through Angular 2 with Typescript.It have followin
 
 
 5. Delete advertisements
+
+
+
+###To Run this project
+
+`npm install`
+
+
+`npm start`
