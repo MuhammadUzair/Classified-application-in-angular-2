@@ -1,0 +1,42 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+    border: 2px solid;
+    background-color: #29394b;
+    padding: 10px;
+    color: #bdc2c5;
+  
+}
+h2 {
+    font-size: 1.6em;
+    padding-bottom: 5px;
+
+}
+
+.tools {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.delete {
+    display: block;
+    background-color: #ec4342;
+    padding: 4px;
+    font-size: .8em;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.details {
+    display: block;
+    background-color: #37ad79;
+    padding: 4px;
+    font-size: .8em;
+    border-radius: 4px;
+    color: #ffffff;
+    text-decoration: none;
+}

@@ -1,0 +1,18 @@
+<footer>
+    <a [routerLink]="['../Addclassified']">
+        <img src="images/01.png" class="icon" />
+    </a>
+</footer>
+<header 
+    [ngClass]="{'category-movies':category === 'Mobile', 'category-series':category === 'Laptop'}">
+    <h2>{{category}}</h2>
+
+</header>
+<section>
+    <media-item *ngFor="#classified of classifieds"
+        [classifiedToWatch]="classified"
+        (deleted)="onclassifiedDeleted($event)"
+        [ngClass]="{'category-movies': classified.category === 'Mobile', 'category-series': classified.category === 'Laptop'}"></media-item>
+</section>
+
+

@@ -1,0 +1,73 @@
+<div class="contnt">
+        <header>
+            <h1>Post Add</h1><br ><br ><br ><br >
+        </header>
+        <form [ngFormModel]="form" (ngSubmit)="onSubmit(form.value)">
+            <ul>
+                <li>
+                    <label for="category">category</label>
+                    <select name="category" id="category" required 
+                        ngControl="category">
+                        <option *ngFor="#category of lookupLists.category" value="{{category}}">{{category}}</option>
+                    </select>
+                </li><br > 
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required
+                        ngControl="name"
+                        #name="ngForm">
+                    <div *ngIf="name.errors?.pattern" class="error">
+                        name has invalid characters
+                    </div>
+                </li><br >
+
+
+                <li>
+                    <label for="name">Model</label>
+                    <input type="text" name="model" id="model" required
+                        ngControl="model"
+                        #model="ngForm">
+                    <div *ngIf="model.errors?.pattern" class="error">
+                        model has invalid characters
+                    </div>
+                </li><br >
+
+
+            <li>
+                    <label for="name">color</label>
+                    <input type="text" name="color" id="color" required
+                        ngControl="color"
+                        #color="ngForm">
+                    <div *ngIf="color.errors?.pattern" class="error">
+                        color has invalid characters
+                    </div>
+                </li><br >
+
+            <li>
+                    <label for="name">More Detail</label>
+                    <input type="text" name="detail" id="detail" required
+                        ngControl="detail"
+                        #detail="ngForm">
+                    <div *ngIf="detail.errors?.pattern" class="error">
+                        detail has invalid characters
+                    </div>
+                </li><br >
+
+
+            <li>
+                    <label for="name">Price</label>
+                    <input type="number" name="price" id="price" required
+                        ngControl="price"
+                        #price="ngForm">
+                    <div *ngIf="price.errors?.pattern" class="error">
+                        price has invalid characters
+                    </div>
+                </li><br >
+
+
+            </ul>    
+            <button type="submit" [disabled]="!form.valid">Save</button>
+        </form>
+
+
+</div>

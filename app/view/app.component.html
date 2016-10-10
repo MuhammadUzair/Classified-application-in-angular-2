@@ -1,0 +1,18 @@
+<nav>
+    <a [routerLink]="['./List', { category: '' }]">
+        <img src="images/04.png" class="icon" />
+    </a>
+    <a [routerLink]="['./List', { category: 'Mobile' }]">
+        <img src="images/05.png" class="icon" />
+    </a>
+    <a [routerLink]="['./List', { category: 'Laptop' }]">
+        <img src="images/02.png" class="icon" />
+    </a>
+        <a [routerLink]="['./List', { category: 'Computer' }]">
+        <img src="images/03.png" class="icon" />
+    </a>
+
+</nav>
+<section>
+    <router-outlet></router-outlet>
+</section>
